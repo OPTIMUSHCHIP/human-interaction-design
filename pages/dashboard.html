@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <script src="https://kit.fontawesome.com/6f560add72.js" crossorigin="anonymous"></script>
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="iphone">
+            <!-- HEADER -->
+            <div class="header">
+                <div class="content">
+                    <i class="fa-solid fa-bars"></i>
+                    <h2>Ski Tracker</h2>
+                </div>
+            </div>
+            <div class="datetime">
+                <p class="datetime-text"></p>
+            </div>
+
+            <!-- DATA -->
+            <div class="data">
+                <ul>
+                    <li>
+                        <h5>Max speed</h5>
+                        <p>0 km/h</p>
+                        <div class="detail">
+                            <div class="row">
+                                <p>Avg</p>
+                                <span>0 km/h</span>
+                            </div>
+                            <div class="row">
+                                <p>Speed</p>
+                                <span>0 km/h</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>Ski distance</h5>
+                        <p>0 km</p>
+                        <div class="detail">
+                            <div class="row">
+                                <p>Ascent</p>
+                                <span>0 km</span>
+                            </div>
+                            <div class="row">
+                                <p>Total</p>
+                                <span>0 km</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>Time</h5>
+                        <p>00:00:00</p>
+                        <div class="detail">
+                            <div class="row">
+                                <p>Ski</p>
+                                <span>00:00:00</span>
+                            </div>
+                            <div class="row">
+                                <p>Ascent</p>
+                                <span>00:00:00</span>
+                            </div>
+                            <div class="row">
+                                <p>Rest</p>
+                                <span>00:00:00</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>Altitude</h5>
+                        <p>7 m AMSL</p>
+                        <div class="detail">
+                            <div class="row">
+                                <p>Max</p>
+                                <span>0 m AMSL</span>
+                            </div>
+                            <div class="row">
+                                <p>Min</p>
+                                <span>0 m AMSL</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- FAST RIDE -->
+            <div class="fast-ride">
+                <h3>FAST RIDE</h3>
+                <ul>
+                    <li>
+                        <h5>MAX SPEED</h5>
+                        <p>0 km/h</p>
+                        <div class="detail">
+                            <p>Avg speed</p>
+                            <span>0 km/h</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>TIME</h5>
+                        <p>00:00:00</p>
+                        <div class="detail">
+                            <p>Distance</p>
+                            <span>0 km</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- COORDINATOR -->
+            <div class="coordinator">
+                <i class="fa-solid fa-share-nodes"></i>
+                <p>10°48'54''N</p>
+                <p>106°42'25''E</p>
+                <i class="fa-solid fa-camera"></i>
+            </div>
+
+            <!-- NAVIGATION -->
+            <div class="navigation">
+                <ul>
+                    <li class="active">
+                        <i class="fa-solid fa-person-skiing"></i>
+                        <p>Ski Tracker</p>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-map"></i>
+                        <p>Map</p>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-calendar"></i>
+                        <p>History</p>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- START COUNTER -->
+            <button class="start-counter">
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+            <!-- START COUNTER FIRE -->
+            <button class="start-counter-fire">
+                <img src="/assets/images/speed-fire.png" alt="start-fire">
+            </button>
+        </div>
+    </div>
+    <script src="/assets/scripts/dashboard.js"></script>
+</body>
+
+</html>
