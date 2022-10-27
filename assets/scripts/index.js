@@ -14,7 +14,7 @@ const handleActiveNavItem = (url) => {
     map.classList.add("active");
     dashboard.classList.remove("active");
     history.classList.remove("active");
-  } else if (url === "history") {
+  } else if (url === "history.html") {
     history.classList.add("active");
     dashboard.classList.remove("active");
     map.classList.remove("active");

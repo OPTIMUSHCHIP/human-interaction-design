@@ -8,7 +8,7 @@
 
 :root {
   --primary: #02a7f0;
-  --width: 310px;
+  --width: 308px;
 }
 
 body,
@@ -25,6 +25,10 @@ html {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.d-none {
+  display: none !important;
 }
 
 .iphone {
@@ -341,7 +345,7 @@ button.start-counter i {
   position: relative;
 }
 .map .iphone .container {
-  width: 305px;
+  width: var(--width);
   height: 615px;
   margin: auto;
 }
@@ -350,6 +354,133 @@ button.start-counter i {
   height: 100%;
   border-radius: 30px;
   margin-top: 20px;
+}
+
+.history .iphone {
+  background-color: #eee;
+  background-image: url(/assets/images/iphone11.png), none;
+  position: relative;
+}
+.history .iphone .container {
+  width: var(--width);
+  height: 615px;
+  margin: auto;
+}
+.history .iphone .container i {
+  color: var(--primary);
+  cursor: pointer;
+}
+.history .iphone .container .filter {
+  background-color: #fff;
+  position: absolute;
+  top: 6.5rem;
+  width: var(--width);
+  padding: 0.5rem 1rem;
+}
+.history .iphone .container .filter button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--primary);
+}
+.history .iphone .container .collapse {
+  background-color: #fff;
+  position: absolute;
+  top: 9rem;
+  z-index: 3;
+  width: var(--width);
+  height: 490px;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  justify-content: start;
+  flex-direction: column;
+  gap: 0;
+  user-select: none;
+}
+.history .iphone .container .collapse::-webkit-scrollbar {
+  display: none;
+}
+.history .iphone .container .collapse {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.history .iphone .container .collapse-month {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 0.5fr;
+  align-items: center;
+  background-color: var(--primary);
+  position: sticky;
+  top: 0;
+}
+.history .iphone .container .collapse-month h6,
+.history .iphone .container .collapse-month span,
+.history .iphone .container .collapse-month i {
+  color: #fff;
+  padding: 0.5rem;
+}
+.history .iphone .container .collapse ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.history .iphone .container .collapse ul li:nth-child(odd) {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 0.5fr;
+  align-items: center;
+}
+.history .iphone .container .collapse ul li:nth-child(odd):not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children {
+  width: 100%;
+  background-color: #eee;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .heading {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 5px;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .table {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .table table tr {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  width: 100%;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .table table tr th,
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .table table tr td {
+  font-size: 10px;
+  font-weight: normal;
+  padding-block: 5px;
+  text-align: center;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .table table tr th {
+  font-weight: 600;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .table .action {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.history .iphone .container h6 {
+  font-size: 15px;
+  font-weight: bold;
+}
+.history .iphone .container span {
+  font-size: 12px;
+  text-align: center;
+}
+.history .iphone .container i {
+  text-align: right;
 }
 
 /*# sourceMappingURL=index.css.map */

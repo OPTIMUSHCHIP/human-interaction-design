@@ -8,7 +8,7 @@
 
 :root {
   --primary: #02a7f0;
-  --width: 310px;
+  --width: 308px;
 }
 
 body,
@@ -26,6 +26,10 @@ html {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.d-none {
+  display: none!important;
 }
 
 .iphone {
@@ -72,3 +76,4 @@ a {
 @import "./startCounter.scss";
 @import "./dashboard.scss";
 @import "./map.scss";
+@import "./history.scss";
