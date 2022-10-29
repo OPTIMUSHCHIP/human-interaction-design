@@ -354,7 +354,8 @@ button.start-counter i {
 .map .iphone .container iframe {
   width: 100%;
   height: 100%;
-  border-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
   margin-top: 20px;
 }
 
