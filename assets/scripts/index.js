@@ -2,22 +2,31 @@ const $ = document.querySelector.bind(document);
 
 const currentUrl = window.location.pathname.slice(7);
 const dashboard = $("li.dashboard"),
+  forecast = $("li.forecast"),
   map = $("li.map"),
   history = $("li.history");
 
 const handleActiveNavItem = (url) => {
   if (url === "dashboard.html") {
+    map.classList.remove("active");
+    history.classList.remove("active");
+    forecast.classList.remove("active");
     dashboard.classList.add("active");
-    map.classList.remove("active");
-    history.classList.remove("active");
   } else if (url === "map.html") {
-    map.classList.add("active");
     dashboard.classList.remove("active");
     history.classList.remove("active");
+    forecast.classList.remove("active");
+    map.classList.add("active");
   } else if (url === "history.html") {
-    history.classList.add("active");
     dashboard.classList.remove("active");
     map.classList.remove("active");
+    forecast.classList.remove("active");
+    history.classList.add("active");
+  } else if (url === "forecast.html") {
+    dashboard.classList.remove("active");
+    map.classList.remove("active");
+    history.classList.remove("active");
+    forecast.classList.add("active");
   }
 };
 

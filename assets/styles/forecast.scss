@@ -1,0 +1,90 @@
+.forecast {
+  .iphone {
+    background-color: #eee;
+    background-image: url(/assets/images/iphone11.png), none;
+    position: relative;
+
+    .container {
+      width: var(--width);
+      height: 615px;
+      margin: auto;
+
+      .location {
+        position: absolute;
+        top: 6.5rem;
+        left: 22px;
+        width: 307px;
+        background: #fff;
+        padding: 0.5rem 1rem;
+
+        h2 {
+          font-size: 15px;
+          font-weight: normal;
+          color: var(--primary);
+          margin-bottom: 0.5rem;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          max-height: 490px;
+          padding-block: 0.5rem;
+          overflow-y: scroll;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          & {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+
+          li.city {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #eee;
+            padding: 0.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+
+            .left {
+              h4 {
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+
+                span {
+                  color: #fff;
+                  font-size: 10px;
+                  background-color: var(--primary);
+                  padding: 5px;
+                  border-radius: 5px;
+                }
+              }
+
+              p {
+                line-height: 3;
+                font-size: 10px;
+                color: rgba($color: #000000, $alpha: 0.5);
+                font-weight: 600;
+                text-transform: uppercase;
+              }
+            }
+            .right {
+              display: flex;
+              gap: 0.5rem;
+              align-items: center;
+              i {
+                color: var(--primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
