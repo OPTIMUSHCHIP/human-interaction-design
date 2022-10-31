@@ -9,6 +9,7 @@
 :root {
   --primary: #02a7f0;
   --width: 308px;
+  --border-sm: 10px;
 }
 
 body,
@@ -23,19 +24,29 @@ html {
   max-height: 100vh;
 }
 
+input {
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
 a {
   color: #fff;
   text-decoration: none;
 }
 
 .d-none {
-  display: none!important;
+  display: none !important;
 }
 
 .iphone {
-  width: 350px;
-  max-width: 350px;
-  min-width: 350px;
+  width: 345px;
+  max-width: 345px;
+  min-width: 345px;
   height: 745px;
   max-height: 745px;
   border-radius: 50px;
@@ -78,3 +89,5 @@ a {
 @import "./map.scss";
 @import "./history.scss";
 @import "./forecast.scss";
+@import "./login.scss";
+@import "./sidebar.scss";

@@ -31,3 +31,19 @@ const handleActiveNavItem = (url) => {
 };
 
 window.onload = handleActiveNavItem(currentUrl);
+
+// SIDEBAR
+const bar = $("i.fa-bars");
+const sidebar = $(".sidebar");
+const closeBtn = $("button.close");
+if (sidebar) {
+  bar.addEventListener("click", () => {
+    sidebar.classList.toggle("d-none");
+  });
+}
+
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("d-none");
+  });
+}

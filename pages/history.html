@@ -13,6 +13,7 @@
     <script>
         $(document).ready(function () {
             $("#header").load("/components/header.html");
+            $("#sidebar").load("/components/sidebar.html");
             $("#footer").load("/components/footer.html");
             $("#startCounter").load("/components/startCounter.html");
             $.getScript("/assets/scripts/index.js")
@@ -27,6 +28,9 @@
         <div class="iphone">
             <!-- HEADER -->
             <header id="header" class="header"></header>
+
+            <!-- SIDEBAR -->
+            <aside id="sidebar"></aside>
 
             <div class="container">
                 <!-- TRACKING FILTER -->
@@ -152,7 +156,8 @@
                                                 11 m
                                             </td>
                                             <td>
-                                                <i class="fa-solid fa-person-skiing" style="transform: rotate(-45deg);"></i>
+                                                <i class="fa-solid fa-person-skiing"
+                                                    style="transform: rotate(-45deg);"></i>
                                                 00:00:00
                                             </td>
                                             <td>0 km</td>
@@ -220,7 +225,8 @@
                                                 11 m
                                             </td>
                                             <td>
-                                                <i class="fa-solid fa-person-skiing" style="transform: rotate(-45deg);"></i>
+                                                <i class="fa-solid fa-person-skiing"
+                                                    style="transform: rotate(-45deg);"></i>
                                                 00:00:00
                                             </td>
                                             <td>0 km</td>

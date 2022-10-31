@@ -9,6 +9,7 @@
 :root {
   --primary: #02a7f0;
   --width: 308px;
+  --border-sm: 10px;
 }
 
 body,
@@ -22,6 +23,15 @@ html {
   max-height: 100vh;
 }
 
+input {
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem;
+}
+input:focus-visible {
+  outline: none;
+}
+
 a {
   color: #fff;
   text-decoration: none;
@@ -32,9 +42,9 @@ a {
 }
 
 .iphone {
-  width: 350px;
-  max-width: 350px;
-  min-width: 350px;
+  width: 345px;
+  max-width: 345px;
+  min-width: 345px;
   height: 745px;
   max-height: 745px;
   border-radius: 50px;
@@ -329,7 +339,7 @@ button.start-counter i {
   position: absolute;
   right: 2rem;
   bottom: 14rem;
-  z-index: 999;
+  z-index: 4;
   box-shadow: 2px 2px 5px red;
   cursor: pointer;
   transition: all 0.25s linear;
@@ -493,13 +503,13 @@ button.start-counter i {
 }
 .forecast .iphone .container {
   width: var(--width);
-  height: 615px;
+  height: 100%;
   margin: auto;
 }
 .forecast .iphone .container .location {
   position: absolute;
   top: 6.5rem;
-  left: 22px;
+  left: 20px;
   width: 307px;
   background: #fff;
   padding: 0.5rem 1rem;
@@ -509,12 +519,70 @@ button.start-counter i {
   font-weight: normal;
   color: var(--primary);
   margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.forecast .iphone .container .location-dropdown {
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px #000;
+  position: absolute;
+  z-index: 5;
+}
+.forecast .iphone .container .location-dropdown .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+.forecast .iphone .container .location-dropdown .search:focus-within {
+  border: 1px solid #000;
+}
+.forecast .iphone .container .location-dropdown .search input {
+  border-right: 1px solid #ccc;
+  flex: 2;
+}
+.forecast .iphone .container .location-dropdown .search i {
+  padding: 0.5rem;
+  color: #000;
+  border-radius: var(--border-sm);
+  color: var(--primary);
+}
+.forecast .iphone .container .location-dropdown .options {
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.forecast .iphone .container .location-dropdown .options p {
+  font-size: 15px;
+  line-height: 1.6;
+  padding-inline: 1rem;
+}
+.forecast .iphone .container .location-dropdown .options p:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+.forecast .iphone .container .location .datetime-picker {
+  color: #fff;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.forecast .iphone .container .location .datetime-picker > div {
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: var(--primary);
+  border-radius: var(--border-sm);
+  width: fit-content;
 }
 .forecast .iphone .container .location ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-height: 490px;
+  max-height: 440px;
   padding-block: 0.5rem;
   overflow-y: scroll;
 }
@@ -531,7 +599,7 @@ button.start-counter i {
   align-items: center;
   background: #eee;
   padding: 0.5rem;
-  border-radius: 10px;
+  border-radius: var(--border-sm);
   cursor: pointer;
 }
 .forecast .iphone .container .location ul li.city .left h4 {
@@ -560,6 +628,89 @@ button.start-counter i {
 }
 .forecast .iphone .container .location ul li.city .right i {
   color: var(--primary);
+}
+
+.login .iphone {
+  background-color: var(--primary);
+  background-image: url(/assets/images/iphone11.png), none;
+  position: relative;
+}
+.login .iphone .container {
+  width: var(--width);
+  height: 100%;
+  margin: auto;
+}
+.login .iphone .container form {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background-color: #fff;
+  border-radius: var(--border-sm);
+  padding: 1rem;
+  width: 80%;
+}
+.login .iphone .container form .top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.login .iphone .container form .top input {
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+.login .iphone .container form .top a {
+  background-color: var(--primary);
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.sidebar {
+  background-color: var(--primary);
+  position: absolute;
+  left: 18px;
+  top: 20px;
+  z-index: 5;
+  border-radius: 30px;
+  height: 705px;
+  width: 310px;
+}
+.sidebar .close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+}
+.sidebar ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 5rem;
+  padding-left: 1rem;
+}
+.sidebar ul a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  font-size: 20px;
+}
+.sidebar ul a:last-child {
+  background-color: red;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-sm);
+}
+.sidebar ul a i {
+  width: 18px;
 }
 
 /*# sourceMappingURL=index.css.map */

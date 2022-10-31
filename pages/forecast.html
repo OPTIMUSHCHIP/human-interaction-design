@@ -13,10 +13,12 @@
     <script>
         $(document).ready(function () {
             $("#header").load("/components/header.html");
+            $("#sidebar").load("/components/sidebar.html");
             $("#footer").load("/components/footer.html");
             $("#startCounter").load("/components/startCounter.html");
             $.getScript("/assets/scripts/index.js")
             $.getScript("/assets/scripts/dashboard/runTimer.js")
+            $.getScript("/assets/scripts/forecast/toggle.js")
         })
     </script>
 </head>
@@ -26,12 +28,42 @@
         <div class="iphone">
             <!-- HEADER -->
             <header id="header" class="header"></header>
+
+            <!-- SIDEBAR -->
+            <aside id="sidebar"></aside>
+
             <div class="container">
                 <div class="location">
                     <h2>
                         <i class="fa-solid fa-location-dot"></i>
                         Ho Chi Minh, Vietnam
+                        <i class="fa-solid fa-chevron-down"></i>
                     </h2>
+                    <div class="location-dropdown d-none">
+                        <div class="search">
+                            <input type="search" name="location-search" id="location-search">
+                            <i class="fa-solid fa-magnifying-glass-location"></i>
+                        </div>
+                        <div class="options">
+                            <p>Lao Cai, Vietnam</p>
+                            <p>Bac Ninh, Vietnam</p>
+                            <p>Fuji, Japan</p>
+                            <p>Zermatt, Switzerland</p>
+                            <p>Matterhorn, Switzerland</p>
+                        </div>
+                    </div>
+                    <div class="datetime-picker">
+                        <div class="date">
+                            <i class="fa-regular fa-calendar"></i>
+                            <span>31 Oct 2022</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="time">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>10:05 AM</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
                     <ul>
                         <li class="city">
                             <div class="left">
