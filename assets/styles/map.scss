@@ -1,13 +1,64 @@
 .map {
   .iphone {
     background-color: #eee;
-    background-image: url(../../human-interaction-design/assets/images/iphone11.png);
+    background-image: url(/assets/images/iphone11.png);
     position: relative;
 
     .container {
       width: var(--width);
       height: 615px;
       margin: auto;
+
+      .search {
+        position: absolute;
+        top: 6.5rem;
+        z-index: 2;
+        height: 70vh;
+        width: 308px;
+        
+        i {
+          font-size: 20px;
+          width: 50px;
+          height: 50px;
+          border-radius: 100rem;
+          background-color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0.5rem;
+          cursor: pointer;
+        }
+
+        &-input {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 305px;
+          display: flex;
+
+          input {
+            padding: 0.5rem;
+            background: #fff;
+            border: 1px solid #fff;
+            width: 90%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            margin-left: 5px;
+          }
+          button {
+            border: 1px solid #fff;
+            background-color: var(--primary);
+            border-color: var(--primary);
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 0.5rem;
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+      }
 
       iframe {
         width: 100%;
