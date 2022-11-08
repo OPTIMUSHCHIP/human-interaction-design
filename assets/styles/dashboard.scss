@@ -1,7 +1,7 @@
 .dashboard {
   .iphone {
     background-color: #eee;
-    background-image: url(../../human-interaction-design/assets/images/iphone11.png);
+    background: url(../../assets/images/iphone11.png);
     position: relative;
 
     .datetime {
@@ -14,7 +14,6 @@
       &-text {
         background-color: #fff;
         padding: 0.5rem;
-        margin: 0 1%;
       }
     }
 
