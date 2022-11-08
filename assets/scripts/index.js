@@ -26,7 +26,7 @@ const handleActiveNavItem = (url) => {
   }
 };
 
-window.onload = handleActiveNavItem(currentUrl);
+if (currentUrl) handleActiveNavItem(currentUrl);
 
 // SIDEBAR
 const bar = $("i.fa-bars");
