@@ -7,7 +7,7 @@
 }
 
 :root {
-  --primary: #02a7f0;
+  --primary: #f66426;
   --width: 308px;
   --border-sm: 10px;
 }
@@ -640,6 +640,15 @@ button.start-counter i {
   height: 100%;
   margin: auto;
 }
+.login .iphone .container h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+.login .iphone .container h2.login {
+  top: 10rem;
+}
 .login .iphone .container form {
   position: absolute;
   top: 40%;
@@ -666,6 +675,30 @@ button.start-counter i {
   display: inline-block;
   padding: 0.2rem;
   text-align: center;
+}
+.login .iphone .container .signup-form {
+  position: absolute;
+  top: 30rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.login .iphone .container .signup-form .social-media {
+  margin-top: 2.5rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  width: 250px;
+  background-color: #fff;
+  border-radius: var(--border-sm);
+  display: flex;
+  justify-content: space-between;
+}
+.login .iphone .container .signup-form .social-media i {
+  padding: 1rem;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: #FFF;
+  border-radius: var(--border-sm);
 }
 
 .sidebar {

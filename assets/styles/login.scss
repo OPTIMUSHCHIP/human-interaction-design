@@ -9,6 +9,17 @@
       height: 100%;
       margin: auto;
 
+      h2 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+      }
+
+      h2.login {
+        top: 10rem;
+      }
+
       form {
         position: absolute;
         top: 40%;
@@ -36,6 +47,33 @@
             display: inline-block;
             padding: 0.2rem;
             text-align: center;
+          }
+        }
+      }
+
+      .signup-form {
+        position: absolute;
+        top: 30rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .social-media {
+          margin-top: 2.5rem;
+          text-align: center;
+          padding: .5rem 1rem;
+          width: 250px;
+          background-color: #fff;
+          border-radius: var(--border-sm);
+          display: flex;
+          justify-content: space-between;
+
+          i {
+            padding: 1rem;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: var(--primary);
+            color: #FFF;
+            border-radius: var(--border-sm);
           }
         }
       }
