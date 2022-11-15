@@ -1,7 +1,7 @@
 .login {
   .iphone {
     background-color: var(--primary);
-    background-image: url(/assets/images/iphone11.png), none;
+    background-image: url(../../human-interaction-design/assets/images/iphone11.png);
     position: relative;
 
     .container {
@@ -25,28 +25,31 @@
         top: 40%;
         left: 50%;
         transform: translate(-50%, -40%);
-        background-color: #fff;
-        border-radius: var(--border-sm);
-        padding: 1rem;
         width: 80%;
 
-        .top {
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
+        form {
+          background-color: #fff;
+          border-radius: var(--border-sm);
+          padding: 1rem;
 
-          input {
-            border-radius: 5px;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-          }
+          .top {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
 
-          a {
-            background-color: var(--primary);
-            border-radius: 5px;
-            display: inline-block;
-            padding: 0.2rem;
-            text-align: center;
+            input {
+              border-radius: 5px;
+              padding: 0.5rem;
+              border: 1px solid #ccc;
+            }
+
+            a {
+              background-color: var(--primary);
+              border-radius: 5px;
+              display: inline-block;
+              padding: 0.2rem;
+              text-align: center;
+            }
           }
         }
       }

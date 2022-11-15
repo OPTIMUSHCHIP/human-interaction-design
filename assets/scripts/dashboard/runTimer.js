@@ -30,7 +30,7 @@ function startWatch() {
 
   continueBtn.removeAttribute("hidden");
 
-  TIMER.innerHTML = gethours + mins + secs;
+  if (TIMER) TIMER.innerHTML = gethours + mins + secs;
   seconds++;
 
   clearTime = setTimeout("startWatch()", 1000);

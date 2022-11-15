@@ -41,6 +41,10 @@ a {
   display: none !important;
 }
 
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .iphone {
   width: 345px;
   max-width: 345px;
@@ -48,7 +52,7 @@ a {
   height: 745px;
   max-height: 745px;
   border-radius: 50px;
-  background: url(/assets/images/iphone11.png), url(/assets/images/home.png);
+  background-image: url(../../human-interaction-design/assets/images/iphone11.png), url(../../human-interaction-design/assets/images/home.png);
   background-size: 350px 745px, 95% 95%;
   background-repeat: no-repeat;
   background-position: center;
@@ -176,7 +180,7 @@ button.start-counter i {
 
 .dashboard .iphone {
   background-color: #eee;
-  background-image: url(/assets/images/iphone11.png), none;
+  background-image: url(../../human-interaction-design/assets/images/iphone11.png);
   position: relative;
 }
 .dashboard .iphone .datetime {
@@ -189,7 +193,6 @@ button.start-counter i {
 .dashboard .iphone .datetime-text {
   background-color: #fff;
   padding: 0.5rem;
-  margin: 0 1%;
 }
 .dashboard .iphone .data ul {
   display: grid;
@@ -353,13 +356,60 @@ button.start-counter i {
 
 .map .iphone {
   background-color: #eee;
-  background-image: url(/assets/images/iphone11.png), none;
+  background-image: url(../../human-interaction-design/assets/images/iphone11.png);
   position: relative;
 }
 .map .iphone .container {
   width: var(--width);
   height: 615px;
   margin: auto;
+}
+.map .iphone .container .search {
+  position: absolute;
+  top: 6.5rem;
+  z-index: 2;
+  height: 70vh;
+  width: 308px;
+}
+.map .iphone .container .search i {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.map .iphone .container .search-input {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 305px;
+  display: flex;
+}
+.map .iphone .container .search-input input {
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid #fff;
+  width: 90%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-left: 5px;
+}
+.map .iphone .container .search-input button {
+  border: 1px solid #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0.5rem;
+  color: #fff;
+  cursor: pointer;
 }
 .map .iphone .container iframe {
   width: 100%;
@@ -371,7 +421,7 @@ button.start-counter i {
 
 .history .iphone {
   background-color: #eee;
-  background-image: url(/assets/images/iphone11.png), none;
+  background-image: url(../../human-interaction-design/assets/images/iphone11.png);
   position: relative;
 }
 .history .iphone .container {
@@ -498,7 +548,7 @@ button.start-counter i {
 
 .forecast .iphone {
   background-color: #eee;
-  background-image: url(/assets/images/iphone11.png), none;
+  background-image: url(../../human-interaction-design/assets/images/iphone11.png);
   position: relative;
 }
 .forecast .iphone .container {
@@ -632,7 +682,7 @@ button.start-counter i {
 
 .login .iphone {
   background-color: var(--primary);
-  background-image: url(/assets/images/iphone11.png), none;
+  background-image: url(../../human-interaction-design/assets/images/iphone11.png);
   position: relative;
 }
 .login .iphone .container {
@@ -654,22 +704,24 @@ button.start-counter i {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -40%);
+  width: 80%;
+}
+.login .iphone .container form form {
   background-color: #fff;
   border-radius: var(--border-sm);
   padding: 1rem;
-  width: 80%;
 }
-.login .iphone .container form .top {
+.login .iphone .container form form .top {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.login .iphone .container form .top input {
+.login .iphone .container form form .top input {
   border-radius: 5px;
   padding: 0.5rem;
   border: 1px solid #ccc;
 }
-.login .iphone .container form .top a {
+.login .iphone .container form form .top a {
   background-color: var(--primary);
   border-radius: 5px;
   display: inline-block;
@@ -722,7 +774,6 @@ button.start-counter i {
   color: #fff;
 }
 .sidebar ul {
-  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -736,14 +787,55 @@ button.start-counter i {
   color: #fff;
   font-size: 20px;
 }
+.sidebar ul a:not(:last-child) {
+  padding-left: 0.8rem;
+}
 .sidebar ul a:last-child {
   background-color: red;
-  width: fit-content;
   padding: 0.5rem 1rem;
   border-radius: var(--border-sm);
+  margin-right: 1rem;
 }
 .sidebar ul a i {
   width: 18px;
+}
+.sidebar .sos button {
+  border: 1px solid #FFF;
+  border-radius: 100rem;
+  width: 100px;
+  height: 100px;
+  font-size: 20px;
+  color: crimson;
+  background-color: #FFF;
+  box-shadow: 0 0 10px 5px crimson;
+  margin: 1.5rem auto;
+  display: block;
+  cursor: pointer;
+}
+.sidebar .sos h5 {
+  color: #FFF;
+  font-size: 15px;
+  text-align: center;
+}
+.sidebar .sos ul {
+  margin-top: 0.5rem;
+  margin-inline: auto;
+  width: 90%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  gap: 1rem;
+}
+.sidebar .sos ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 3px solid crimson;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+.sidebar .sos ul li i {
+  color: crimson;
 }
 
 /*# sourceMappingURL=index.css.map */
